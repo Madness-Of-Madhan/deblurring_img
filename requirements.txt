@@ -1,0 +1,21 @@
+# PyTorch
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Image processing
+Pillow>=9.5.0
+opencv-python>=4.8.0
+
+# Data & utilities
+numpy>=1.23.0,<2.0.0
+pandas>=2.0.0
+tqdm>=4.65.0
+
+# Metrics
+scikit-image>=0.21.0
+lpips>=0.1.4
+
+# Flask API
+flask>=2.3.0
+flask-cors>=4.0.0
+gunicorn>=21.2.0

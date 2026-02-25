@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  deblurring-api:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./static:/app/static
+    environment:
+      - FLASK_ENV=production
+      - OMP_NUM_THREADS=4
+      - MKL_NUM_THREADS=4
+    restart: unless-stopped
+    # Limit CPU usage if needed
+    deploy:
+      resources:
+        limits:
+          cpus: '4.0'
+          memory: 4G
+        reservations:
+          cpus: '2.0'
+          memory: 2G
